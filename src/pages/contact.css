@@ -1,0 +1,55 @@
+.contact{
+    background: url("https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center/cover;
+    
+}
+label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .t{
+    margin-left: 10%;
+  }
+
+  
+
+  
+input, textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(114, 156, 163);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #2597ac;
+}
+
+@media screen and (max-width: 650px) {
+  .t{
+   margin-left: 10%;
+  }
+   
+input, textarea {
+  text-align: center;
+  width: 90%;
+ 
+}
+  
+}

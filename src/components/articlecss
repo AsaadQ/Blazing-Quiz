@@ -1,0 +1,113 @@
+.body-article {
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.container {
+  max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 110px;
+    margin: 0 auto;
+}
+
+#article {
+ 
+
+  font-family: Arbutus Slab, serif;
+  font-weight: normal;
+  color: #000;
+  line-height: 1.25;
+  text-decoration: none;
+  font-size: 25px;
+  background:red;
+
+}
+
+.card {
+  cursor: pointer;
+  height: 0;
+  padding: 10px;
+  padding-bottom: 120%;
+  --offset-multiplier: 4px;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  --translate: 0;
+  -webkit-transform: translate(var(--translate), var(--translate));
+  transform: translate(var(--translate), var(--translate));
+}
+.card:hover {
+  --offset-multiplier: 6px;
+}
+.card:hover {
+  
+  --translate: calc(-1px * (var(--cards) - 1));
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.child {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-spacing: 15px;
+  padding: 0 16px;
+  background: #fff;
+  box-shadow: 0px 4px 8px #83eaf1, 0px -4px 8px #63a4ff;
+  border-radius: 6px;
+  -webkit-transition: inherit;
+  transition: inherit;
+  --translate: calc(var(--offset) * var(--offset-multiplier));
+  -webkit-transform: translate(var(--translate), var(--translate));
+  transform: translate(var(--translate), var(--translate));
+  z-index: 4;
+}
+.child:nth-child(1) {
+  --offset: 0;
+  z-index: 4;
+}
+.child:nth-child(2) {
+  --offset: 1;
+  z-index: 3;
+}
+.child:nth-child(3) {
+  --offset: 2;
+  z-index: 2;
+}
+.child:nth-child(4) {
+  --offset: 3;
+  z-index: 1;
+}
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+
+
+
+
+
